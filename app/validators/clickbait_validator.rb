@@ -1,3 +1,4 @@
+# This is not needed
 class ClickbaitValidator < ActiveModel::Validator
     def validate(record)
         unless record.clickbait.any? {|t| record.include? t}
@@ -6,6 +7,7 @@ class ClickbaitValidator < ActiveModel::Validator
     end 
 end
 
+# wrong place to put this 
 class Post 
     include ActiveModel::Validations
     validates_with ClickbaitValidator
